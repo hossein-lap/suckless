@@ -33,6 +33,8 @@ See the man page for details.
 
 ### Screenshot
 
-![l-and-g-redirected](shots/20220803_175714.png)
+![220904-223222](shots/220904-223222.png)
 
-![run-prompet-centered-with-l](shots/20220803_180024.png)
+![220904-223252](shots/220904-223252.png)
+
+![220904-223304](shots/220904-223304.png)
