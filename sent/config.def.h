@@ -1,6 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 static char *fontfallbacks[] = {
+	"Libertinus Sans",
 	"Source Sans Pro",
 	"Source Serif Pro",
 	"ubuntu",

@@ -59,6 +59,8 @@ and (re)compiling the source code.
 
 ![color-on-fg](shots/color-on-fg.png)
 
+![dracula](shots/dracula.png)
+
 ### Todo
 
 - [ ] dependencies
