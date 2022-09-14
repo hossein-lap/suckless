@@ -19,11 +19,13 @@ static       Bool urgentswitch  = False;
 static int  newposition   = 0;
 static Bool npisrelative  = True;
 
+#define DMCOLORS "-sf '#000000' -sb '#ff7700' -nf '#ff7700' -nb '#000000' "
+#define DMENU "dmenu " DMCOLORS " -g 2 -p tab -l 5 -bw 0 -w $1"
 #define SETPROP(p) { \
         .v = (char *[]){ "/bin/sh", "-c", \
                 "prop=\"`xwininfo -children -id $1 | grep '^     0x' |" \
                 "sed -e's@^ *\\(0x[0-9a-f]*\\) \"\\([^\"]*\\)\".*@\\1 \\2@' |" \
-                "xargs -0 printf %b | dmenu -l 10 -w $1`\" &&" \
+                "xargs -0 printf %b | " DMENU "`\" &&" \
                 "xprop -id $1 -f $0 8s -set $0 \"$prop\"", \
                 p, winid, NULL \
         } \
