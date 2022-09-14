@@ -1,27 +1,23 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]        = "Source Code Pro:size=18";
-static const char* normbgcolor  = "#282A36";
-static const char* normfgcolor  = "#F8F8EF";
-static const char* selbgcolor   = "#11121D";
-static const char* selfgcolor   = "#BD93F9";
-static const char* urgfgcolor   = "#111111";
-static const char* urgbgcolor   = "#ff0000";
+static const char font[]        = "Fira Code:size=15";
 static const char before[]      = "<";
 static const char after[]       = ">";
 static const char titletrim[]   = "...";
-static const int  tabwidth      = 200;
-static const Bool foreground    = True;
+static const int  tabwidth      = 100;
+static const Bool foreground    = False;
 static       Bool urgentswitch  = False;
+/* colors */
+#include "colors/solarized-dark.h"
 
 /*
  * Where to place a new tab when it is opened. When npisrelative is True,
  * then the current position is changed + newposition. If npisrelative
  * is False, then newposition is an absolute position.
  */
-static int  newposition   = 1;
-static Bool npisrelative  = False;
+static int  newposition   = 0;
+static Bool npisrelative  = True;
 
 #define SETPROP(p) { \
         .v = (char *[]){ "/bin/sh", "-c", \
