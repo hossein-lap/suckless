@@ -26,12 +26,14 @@ static int borderpx = 4;
  *  - hybrid-16
  *  - hybrid-dark
  *  - pj
- *  - solarized-dark
  *  - tokyodark
  *  - tokyonight
  *  - vscode
+ *  -- my fav:
+ *  - termite
+ *  - solarized-dark
  */
-#include "colors/solarized-dark.h"
+#include "colors/termite.h"
 
 /*
  * Default colors (colorname index)
