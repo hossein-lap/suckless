@@ -37,15 +37,6 @@ Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
 
 - Colorscheme:
 
-
-2. Dracula
-3. Solarized-dark
-4. Gruvbox-dark
-5. Ubuntu
-6. Tango
-7. 256_noir
-8. Solarized-light
-
 | 0. Termite                  | 1. Hos              |
 |:---------------------------:|:-------------------:|
 | ![0-Termite](shots/0-Termite.png) | ![1-Hos](shots/1-Hos.png) |
