@@ -2298,6 +2298,28 @@ tstrsequence(uchar c)
 }
 
 void
+tupdatebgcolor(int oldbg, int newbg)
+{
+	for (int y = 0; y < term.row; y++) {
+		for (int x = 0; x < term.col; x++) {
+			if (term.line[y][x].bg == oldbg)
+				term.line[y][x].bg = newbg;
+		}
+	}
+}
+
+void
+tupdatefgcolor(int oldfg, int newfg)
+{
+	for (int y = 0; y < term.row; y++) {
+		for (int x = 0; x < term.col; x++) {
+			if (term.line[y][x].fg == oldfg)
+				term.line[y][x].fg = newfg;
+		}
+	}
+}
+
+void
 tcontrolcode(uchar ascii)
 {
 	switch (ascii) {

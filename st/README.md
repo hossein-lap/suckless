@@ -35,10 +35,33 @@ Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
 
 ## Screenshot
 
-- Ligtures
+- Colorscheme:
 
-![Ligtures](shots/ligtures.png)
 
-- Colorscheme
+2. Dracula
+3. Solarized-dark
+4. Gruvbox-dark
+5. Ubuntu
+6. Tango
+7. 256_noir
+8. Solarized-light
 
-![hos-h](st.png)
+| 0. Termite                  | 1. Hos              |
+|:---------------------------:|:-------------------:|
+| ![0-Termite](shots/0-Termite.png) | ![1-Hos](shots/1-Hos.png) |
+
+| 2. Dracula                  | 3. Solarized-dark                         |
+|:---------------------------:|:-----------------------------------------:|
+| ![2-Dracula](shots/2-Dracula.png) | ![3-Solarized-dark](shots/3-Solarized-dark.png) |
+
+| 4. Gruvbox-dark                       | 5. Ubuntu                 |
+|:-------------------------------------:|:-------------------------:|
+| ![4-Gruvbox-dark](shots/4-Gruvbox-dark.png) | ![5-Ubuntu](shots/5-Ubuntu.png) |
+
+| 6. Tango                  | 7. 256_noir                   |
+|:-------------------------:|:-----------------------------:|
+| ![6-Tango](shots/6-Tango.png)   | ![7-256_noir](shots/7-256_noir.png) |
+
+| 8. Solarized-light                                |
+|:-------------------------------------------------:|
+| ![8-Solarized-light](shots/8-Solarized-light.png) |

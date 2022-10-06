@@ -13,36 +13,68 @@ static char *font2[] = {
 
 static int borderpx = 4;
 
+/* default opacity */
+float alpha = 1.00;
+
+/* define colorscheme[s] */
+typedef struct {
+	const char* const colors[258]; /* terminal colors */
+	unsigned int fg;               /* foreground */
+	unsigned int bg;               /* background */
+	unsigned int cs;               /* cursor */
+	unsigned int rcs;              /* reverse cursor */
+} ColorScheme;
+
 /*
- * Terminal colors
- * List
- *  - 256_noir
- *  - breeze
- *  - custom
- *  - dracula
- *  - gruvbox-dark
- *  - gruvbox-material
- *  - hos
- *  - hybrid-16
- *  - hybrid-dark
- *  - pj
- *  - tokyodark
- *  - tokyonight
- *  - vscode
- *  -- my fav:
- *  - termite
- *  - solarized-dark
+ * Terminal colors (16 first used in escape sequence,
+ * 2 last for custom cursor color),
+ * foreground, background, cursor, reverse cursor
  */
-#include "colors/termite.h"
+
+/* colorschemes  */
+#include "colors.h"
+
+static const char * const * colorname;
+
+/* default colorscheme */
+int colorscheme = 0;
+
+/*
+ * available colorschemes:
+ *   0. Termite
+ *   1. Hos
+ *   2. Dracula
+ *   3. Solarized-dark
+ *   4. Gruvbox-dark
+ *   5. Ubuntu
+ *   6. Tango
+ *   7. 256_noir
+ *   8. Solarized-light
+ */
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultbg = 256;
-unsigned int defaultfg = 257;
-unsigned int defaultcs = 258;
-static unsigned int defaultrcs = 259;
+unsigned int defaultbg;
+unsigned int defaultfg;
+unsigned int defaultcs;
+static unsigned int defaultrcs;
+
+/*
+ * Terminal colors available in colors/ directory:
+ *  - 256_noir         - hybrid-dark
+ *  - breeze           - pj
+ *  - custom           - tokyodark
+ *  - dracula          - tokyonight
+ *  - gruvbox-dark     - vscode
+ *  - gruvbox-material - termite
+ *  - hos              - solarized-dark
+ *  - hybrid-16
+ *
+ *  before [colorschemes] patch all you need was an #include:
+ *  #include "colors/termite.h"
+ */
 
 /*
  * Default shape of cursor
@@ -203,7 +235,7 @@ static Shortcut shortcuts[] = {
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
 	{ TERMMOD,              XK_equal,       zoom,           {.f = +1} },
 	{ TERMMOD,              XK_minus,       zoom,           {.f = -1} },
-	{ TERMMOD,              XK_0,           zoomreset,      {.f =  0} },
+	{ TERMMOD|ControlMask,  XK_equal,       zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_c,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_v,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_y,           selpaste,       {.i =  0} },
@@ -214,6 +246,17 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_s,           changealpha,    {.f = -0.05} },
 	{ TERMMOD,              XK_a,           changealpha,    {.f = +0.05} },
 	{ TERMMOD,              XK_Return,      newterm,        {.i =  0} },
+	{ TERMMOD,              XK_1,           selectscheme,   {.i =  0} },
+	{ TERMMOD,              XK_2,           selectscheme,   {.i =  1} },
+	{ TERMMOD,              XK_3,           selectscheme,   {.i =  2} },
+	{ TERMMOD,              XK_4,           selectscheme,   {.i =  3} },
+	{ TERMMOD,              XK_5,           selectscheme,   {.i =  4} },
+	{ TERMMOD,              XK_6,           selectscheme,   {.i =  5} },
+	{ TERMMOD,              XK_7,           selectscheme,   {.i =  6} },
+	{ TERMMOD,              XK_8,           selectscheme,   {.i =  7} },
+	{ TERMMOD,              XK_9,           selectscheme,   {.i =  8} },
+	{ TERMMOD,              XK_0,           nextscheme,     {.i = +1} },
+	{ TERMMOD|ControlMask,  XK_0,           nextscheme,     {.i = -1} },
 };
 
 /*
