@@ -1,5 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
+/* Macros for shortcut */
+#define SRCPATH "~/.local/dev/hossein-lap/scripts"
+
 /* interval between updates (in ms) */
 const unsigned int interval = 1000;
 
@@ -66,32 +69,34 @@ static const char unknown_str[] = "-";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+	{ run_command,	"%s",	"bash "SRCPATH"/sls-ffmpeg.sh"	},
 	{ separator,	"%s",		" "			},
 	{ separator,	"%s",		"b:"			},
-	{ battery_perc,	"%s%%",		"BAT1"			},
+	//{ battery_perc,	"%s",		"BAT1"			},
+	{ run_command,	"%s",	"bash "SRCPATH"/sls-battery.sh"	},
 
 	{ separator,	"%s",		" "			},
 	{ separator,	"%s",		"c:"			},
-	{ cpu_perc,	"%s%%"					},
+	{ cpu_perc,	"%s"					},
 
 	{ separator,	"%s",		" "			},
 	{ separator,	"%s",		"m:"			},
-	{ ram_perc,	"%s%%"					},
+	{ ram_perc,	"%s"					},
 
 	{ separator,	"%s",		" "			},
 	{ separator,	"%s",		"w:"			},
-	{ wifi_perc,	"%s",		"wlan0"			},
+	{ wifi_perc,	"%s",		"wlp45s0"		},
+	//{ wifi_perc,	"%s",		"wlan0"			},
 
 	{ separator,	"%s",		" "			},
 	{ separator,	"%s",		"p:"			},
-	{ run_command,	"%s",				   /*   }   */
-	"bash ~/.local/dev/hossein-lap/scripts/theping.sh"	},
+	{ run_command,	"%s",	"bash "SRCPATH"/sls-ping.sh"	},
 
 	{ separator,	"%s",		" "			},
 	{ keymap,	"%s"					},
 	{ separator,	"%s",		" "			},
 
-	{ run_command,	"%s",		"jdate '+%d/%b'"	},
+	{ run_command,	"%s",		"jdate '+%m-%d'"	},
 	{ separator,	"%s",		" "			},
 	{ datetime,	"%s",		"%y-%m-%d"		},
 
