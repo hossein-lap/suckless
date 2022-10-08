@@ -154,37 +154,6 @@ static const ColorScheme schemes[] = {
 		257  /* I have no idea XD */
 	},
 	/*}}}*/
-	/* Ayu-dark {{{ */
-	{
-		{
-		/* 8 normal colors */
-			"#01060e",
-			"#ea6c73",
-			"#91b362",
-			"#f9af4f",
-			"#53bdfa",
-			"#fae994",
-			"#90e1c6",
-			"#c7c7c7",
-		/* 8 bright colors */
-			"#686868",
-			"#f07178",
-			"#c2d94c",
-			"#ffb454",
-			"#59c2ff",
-			"#ffee99",
-			"#95e6cb",
-			"#ffffff",
-		/* special */
-			[256] = "#b3b1ad", // foreground
-			[257] = "#0a0e14", // background
-		},
-		15,   /* foreground */
-		257,  /* background */
-		1,    /* cursor */
-		257   /* I have no idea XD */
-	},
-	/* }}} */
 	/* Ubuntu {{{ */
 	{
 		{
@@ -209,6 +178,37 @@ static const ColorScheme schemes[] = {
 		/* special */
 			[256] = "#eeeeec",
 			[257] = "#300a24"
+		},
+		15,   /* foreground */
+		257,  /* background */
+		1,    /* cursor */
+		257   /* I have no idea XD */
+	},
+	/* }}} */
+	/* Ayu-dark {{{ */
+	{
+		{
+		/* 8 normal colors */
+			"#01060e",
+			"#ea6c73",
+			"#91b362",
+			"#f9af4f",
+			"#53bdfa",
+			"#fae994",
+			"#90e1c6",
+			"#c7c7c7",
+		/* 8 bright colors */
+			"#686868",
+			"#f07178",
+			"#c2d94c",
+			"#ffb454",
+			"#59c2ff",
+			"#ffee99",
+			"#95e6cb",
+			"#ffffff",
+		/* special */
+			[256] = "#b3b1ad", // foreground
+			[257] = "#0a0e14", // background
 		},
 		15,   /* foreground */
 		257,  /* background */

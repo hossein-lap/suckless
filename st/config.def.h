@@ -32,7 +32,7 @@ typedef struct {
  */
 
 /* colorschemes  */
-#include "colors.h"
+#include "schemes.h"
 
 static const char * const * colorname;
 
@@ -47,7 +47,7 @@ int colorscheme = 0;
  *   3. Solarized-dark
  *   4. Gruvbox-dark
  *   5. Ubuntu
- *   6. Tango
+ *   6. Ayu-dark
  *   7. 256_noir
  *   8. Solarized-light
  */
