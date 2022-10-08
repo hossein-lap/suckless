@@ -6,7 +6,7 @@
 --
 
 function help()
-	io.write("Create new colorscheme", "\n\n",
+	io.stderr:write("Create new colorscheme", "\n\n",
 			"Usage: ", arg[0], " <color-name> <hex-color>", "\n",
 			"\n", "\t",
 			"exmaple: \n\n\t", "$ ", arg[0], " cyan 00ffff \n",
