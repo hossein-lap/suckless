@@ -68,5 +68,5 @@ uninstall:
 	rm -f "$(DESTDIR)$(MANPREFIX)/man1/slstatus.1"
 
 force:
-	mv -v config.h config.h.old
+	rm -f config.h
 	make
