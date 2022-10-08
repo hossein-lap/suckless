@@ -56,10 +56,10 @@ static const Rule rules[] = {
 	 */
 	/* class	instance	title		tags mask	isfloating	monitor */
 //	{ "Gimp",	NULL,	NULL,				0,		1,	-1 },
-	{ "Firefox",	NULL,	NULL,				1 << 8,		0,	-1 },
+	{ "Firefox",	NULL,	NULL,				4,		0,	-1 },
 	{ "sxiv",	NULL,	NULL,				0,		1,	-1 },
 	//{ "persepolis",	NULL,	"Persepolis Download Manager",	0,		1,	-1 },
-	{ "Telegram",	NULL,	"Telegram",			4,		0,	-1 },
+	{ "Telegram",	NULL,	"Telegram",			5,		0,	-1 },
 	{ "sterm",	NULL,	"Term",				0,		1,	-1 },
 	{ "st",		NULL,	"Terminal",			0,		1,	-1 },
 	{ "st",		NULL,	"Note",				0,		1,	-1 },
