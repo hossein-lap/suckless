@@ -49,9 +49,9 @@ Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
 |:-------------------------------------:|:-------------------------:|
 | ![4-Gruvbox-dark](shots/4-Gruvbox-dark.png) | ![5-Ubuntu](shots/5-Ubuntu.png) |
 
-| 6. Tango                  | 7. 256_noir                   |
+| 6. Ayu-dark                  | 7. 256_noir                   |
 |:-------------------------:|:-----------------------------:|
-| ![6-Tango](shots/6-Tango.png)   | ![7-256_noir](shots/7-256_noir.png) |
+| ![6-Ayu-dark](shots/6-Ayu-dark.png)   | ![7-256_noir](shots/7-256_noir.png) |
 
 | 8. Solarized-light                                |
 |:-------------------------------------------------:|

@@ -62,7 +62,7 @@ unsigned int defaultcs;
 static unsigned int defaultrcs;
 
 /*
- * Terminal colors available in colors/ directory:
+ * Terminal colors available in `colors/` directory:
  *  - 256_noir         - hybrid-dark
  *  - breeze           - pj
  *  - custom           - tokyodark

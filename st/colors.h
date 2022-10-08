@@ -117,10 +117,10 @@ static const ColorScheme schemes[] = {
 			[256] = "#93a1a1",
 			[257] = "#fdf6e3"
 		},
-			12,  /* foreground */
-			8,   /* background */
-			9,   /* cursor */
-			257  /* I have no idea XD */
+		12,  /* foreground */
+		8,   /* background */
+		9,   /* cursor */
+		257  /* I have no idea XD */
 	},
 	/*}}}*/
 	/* Gruvbox-dark {{{ */
@@ -146,14 +146,45 @@ static const ColorScheme schemes[] = {
 			"#ebdbb2", /* white   */
 		/* special */
 			[256] = "#ebdbb2",
-			[257] = "#555555"
+			[257] = "#555555",
 		},
-			15,  /* foreground */
-			0,   /* background */
-			9,   /* cursor */
-			257  /* I have no idea XD */
+		15,  /* foreground */
+		0,   /* background */
+		9,   /* cursor */
+		257  /* I have no idea XD */
 	},
 	/*}}}*/
+	/* Ayu-dark {{{ */
+	{
+		{
+		/* 8 normal colors */
+			"#01060e",
+			"#ea6c73",
+			"#91b362",
+			"#f9af4f",
+			"#53bdfa",
+			"#fae994",
+			"#90e1c6",
+			"#c7c7c7",
+		/* 8 bright colors */
+			"#686868",
+			"#f07178",
+			"#c2d94c",
+			"#ffb454",
+			"#59c2ff",
+			"#ffee99",
+			"#95e6cb",
+			"#ffffff",
+		/* special */
+			[256] = "#b3b1ad", // foreground
+			[257] = "#0a0e14", // background
+		},
+		15,   /* foreground */
+		257,  /* background */
+		1,    /* cursor */
+		257   /* I have no idea XD */
+	},
+	/* }}} */
 	/* Ubuntu {{{ */
 	{
 		{
@@ -178,37 +209,6 @@ static const ColorScheme schemes[] = {
 		/* special */
 			[256] = "#eeeeec",
 			[257] = "#300a24"
-		},
-		15,   /* foreground */
-		257,  /* background */
-		1,    /* cursor */
-		257   /* I have no idea XD */
-	},
-	/* }}} */
-	/* Tango {{{ */
-	{
-		{
-		/* 8 normal colors */
-			"#000000",
-			"#ef2929",
-			"#8ae234",
-			"#fce94f",
-			"#729fcf",
-			"#ad7fa8",
-			"#34e2e2",
-			"#eeeeec",
-		/* 8 bright colors */
-			"#555753",
-			"#cc0000",
-			"#4e9a06",
-			"#c4a000",
-			"#3465a4",
-			"#75507b",
-			"#06989a",
-			"#d3d7cf",
-		/* special */
-			[256] = "#eeeeec",
-			[257] = "#000000"
 		},
 		15,   /* foreground */
 		257,  /* background */
@@ -273,10 +273,10 @@ static const ColorScheme schemes[] = {
 			[257] = "#fafafa"
 			//"#002b36"
 		},
-			12,   /* foreground */
-			8,    /* background */
-			256,  /* cursor */
-			257   /* I have no idea XD */
+		12,   /* foreground */
+		8,    /* background */
+		256,  /* cursor */
+		257   /* I have no idea XD */
 	},
 	/*}}}*/
 };
