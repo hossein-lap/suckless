@@ -1,16 +1,16 @@
 /* See LICENSE file for copyright and license details. */
 
 /* vars */
+#define SCRIPTSPATH "~/.local/dev/hossein-lap/scripts/"
+
 static const char term[]		= "st";
-static const char fileman[]		= "ranger";
+static const char fileman[]		= "sh "SCRIPTSPATH"lfub";
 static const char browser[]		= "firefox";
 static const char muspley[]		= "cmus";
 //static const char rssread[]		= "newsboat";
 
-static const char ndterm[]		= "alacritty";
+//static const char ndterm[]		= "alacritty";
 static const char bdterm[]		= "lxterminal";
-
-#define SCRIPTSPATH "~/.local/dev/hossein-lap/scripts/"
 
 /* colorschemes */
 /*
@@ -23,7 +23,7 @@ static const char bdterm[]		= "lxterminal";
  *   - dracula
  *   - soalrized-dark: {blue,green,pink,yellow}
  */
-#include "colors/bg/orange.h"
+#include "colors/solarized-dark/blue.h"
 
 static const char *colors[][3]	  = {
         /*                     fg        bg        border   */
@@ -34,7 +34,7 @@ static const char *colors[][3]	  = {
 /* appearance */
 static const unsigned int borderpx	= 2;	/* border pixel of windows */
 static const unsigned int snap		= 32;	/* snap pixel */
-static const unsigned int gappx		= 15;	/* gap pixel between windows */
+static const unsigned int gappx		= 18;	/* gap pixel between windows */
 static const int showbar		= 1;	/* 0 means no bar */
 static const int topbar			= 1;	/* 0 means bottom bar */
 
@@ -43,11 +43,11 @@ static const char dmenufont[]		= { "Fira Code:size=15" };
 
 /* tagging */
 //static const char *tags[] = { "sys", "dev", "www", "dir", "vid", "doc", "em", "pre", "tmp" };
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+//static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 //static const char *tags[] = { "a", "b", "c", "d", "e", "f", "g", "h", "i" };
 //static const char *tags[] = { "a", "s", "d", "f", "g", "h", "j", "k", "l" };
 //static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
-//static const char *tags[] = { "i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix" };
+static const char *tags[] = { "i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -56,10 +56,10 @@ static const Rule rules[] = {
 	 */
 	/* class	instance	title		tags mask	isfloating	monitor */
 //	{ "Gimp",	NULL,	NULL,				0,		1,	-1 },
-	{ "Firefox",	NULL,	NULL,				4,		0,	-1 },
+	{ "Mozilla Firefox",	NULL,	NULL,				4,		0,	-1 },
 	{ "sxiv",	NULL,	NULL,				0,		1,	-1 },
 	//{ "persepolis",	NULL,	"Persepolis Download Manager",	0,		1,	-1 },
-	{ "Telegram",	NULL,	"Telegram",			5,		0,	-1 },
+	//{ "Telegram",	NULL,	"Telegram",			5,		0,	-1 },
 	{ "sterm",	NULL,	"Term",				0,		1,	-1 },
 	{ "st",		NULL,	"Terminal",			0,		1,	-1 },
 	{ "st",		NULL,	"Note",				0,		1,	-1 },
@@ -92,30 +92,33 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenupln[]	= { "dmenu_run", "-p", "run:", "-m", dmenumon, "-fn", dmenufont,
+static const char *dmenupln[]	= { "dmenu_run", "-p", "run", "-m", dmenumon, "-fn", dmenufont,
 	"-bw", "0", "-nb", normal_bg, "-nf", normal_fg, "-sb", focus_bg, "-sf", focus_fg, NULL };
-static const char *dmenucmd[]	= { "dmenu_run", "-p", "run:", "-m", dmenumon, "-fn", dmenufont, "-nb", normal_bg, "-nf", normal_fg,
+static const char *dmenucmd[]	= { "dmenu_run", "-p", "run", "-m", dmenumon, "-fn", dmenufont, "-nb", normal_bg, "-nf", normal_fg,
 					"-sb", focus_bg, "-sf", focus_fg, "-c", "-l", "15", "-g", "1", NULL };
 static const char *termcmd[]	= { term, NULL };
-static const char *ndtmcmd[]	= { ndterm, NULL };
+//static const char *ndtmcmd[]	= { ndterm, NULL };
 /* hos custom {{{ */
 
-//static const char *tabbdcmd[]	= { "tabbed", "-c", "-r", "2", "st", "-w", "''", NULL };
+static const char *tabbdcmd[]	= { "tabbed", "-c", "-r", "2", "st", "-w", "''", NULL };
 static const char *floatcmd[]	= { term, "-t", "Terminal", NULL};
 //static const char *floatcmd[]	= { "st", "-t", "Terminal", NULL};
 static const char *takenote[]	= { "st", "-t", "Note", "bash", "-c", SCRIPTSPATH"note-take.sh", NULL};
 static const char *bidicmd[]	= { bdterm, NULL};
 
-static const char *filecmd[]	= { term, "-t", "Terminal", fileman, NULL};
+static const char *filecmd[]	= { term, "-t", "lf", fileman, NULL};
 //static const char *newsboat[]	= { term, "-t", "Terminal", rssread, NULL};
 static const char *muscmd[]	= { "bash", "-c", SCRIPTSPATH"cmus-tmux.sh", NULL};
 static const char *wwwcmd[]	= { browser, NULL};
+/* change brightness */
+static const char *brightu[]	= { "brightnessctl", "s", "+5\%", NULL};
+static const char *brightd[]	= { "brightnessctl", "s", "5\%-", NULL};
 
 static const char *dmshot[]	= { "bash", "-c", SCRIPTSPATH"dm-shot.sh", dmenumon, NULL};
 
 static const char *dmkill[]	= { "bash", "-c", SCRIPTSPATH"dm-kill.sh", dmenumon, NULL};
 static const char *dmsrun[]	= { "bash", "-c", SCRIPTSPATH"dm-srun.sh", dmenumon, NULL};
-static const char *dmusbd[]	= { "bash", "-c", SCRIPTSPATH"dm-usb.sh", dmenumon, NULL};
+static const char *dmusbd[]	= { "bash", "-c", SCRIPTSPATH"dm-usb.sh", focus_bg, focus_bg, normal_fg, NULL};
 static const char *scrn_lock[]	= { "slock", NULL};
 static const char *emclient[]	= { "emacsclient", "-c", "-a", "emacs", NULL};
 /* }}}*/
@@ -123,7 +126,8 @@ static const char *emclient[]	= { "emacsclient", "-c", "-a", "emacs", NULL};
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 /* hos custom {{{ */
-	{ MODKEY|ShiftMask,		XK_t,		spawn,		{.v = ndtmcmd	} },
+	{ MODKEY|ShiftMask,		XK_t,		spawn,		{.v = tabbdcmd	} },
+	//{ MODKEY|ShiftMask,		XK_t,		spawn,		{.v = ndtmcmd	} },
 	//{ MODKEY|ShiftMask,		XK_Return,	spawn,		{.v = tabbdcmd	} },
 	{ MODKEY|ShiftMask,		XK_Return,	spawn,		{.v = termcmd	} },
 	{ MODKEY,			XK_x,		spawn,		{.v = floatcmd	} },
@@ -139,10 +143,12 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		{.v = muscmd	} },
 
 	{ MODKEY,			XK_n,		spawn,		{.v = takenote	} },
-	{ MODKEY,			XK_r,		spawn,		{.v = dmenupln } },
 	{ MODKEY,			XK_e,		spawn,		{.v = emclient	} },
+	{ MODKEY,			XK_p,		spawn,		{.v = dmenupln	} },
+	{ MODKEY,			XK_r,		spawn,		{.v = dmenucmd	} },
+	{ MODKEY,			XK_Up,		spawn,		{.v = brightu	} },
+	{ MODKEY,			XK_Down,	spawn,		{.v = brightd	} },
 /* }}}*/
-	{ MODKEY,			XK_p,		spawn,		{.v = dmenucmd } },
 	{ MODKEY,			XK_b,		togglebar,	{0} },
 	{ MODKEY,			XK_j,		focusstack,	{.i = +1 } },
 	{ MODKEY,			XK_k,		focusstack,	{.i = -1 } },
