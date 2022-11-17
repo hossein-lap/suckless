@@ -3,18 +3,15 @@ static const char *user  = "hos";
 static const char *group = "hos";
 
 static const char *colorname[NUMCOLS] = {
-	[BACKGROUND]	= "#000000",   /* after initialization */
-	[INIT]		= "#2d2d2d",   /* after initialization */
+	[BACKGROUND]	= "#300a24",   /* after initialization */
+	[INIT]		= "#ff7700",   /* after initialization */
 	[INPUT]		= "#22aaff",   /* during input */
 	[FAILED]	= "#ff2222",   /* wrong password */
-	[CAPS]		= "#ffaa22",   /* CapsLock on */
+	[CAPS]		= "#aaff22",   /* CapsLock on */
 };
 
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
-
-/* allow control key to trigger fail on clear */
-static const int controlkeyclear = 1;
 
 /* insert grid pattern with scale 1:1, the size can be changed with logosize */
 static const int logosize = 75;
