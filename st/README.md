@@ -37,22 +37,22 @@ Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
 
 - Colorscheme:
 
-| 0. Termite                  | 1. Hos              |
-|:---------------------------:|:-------------------:|
-| ![0-Termite](shots/0-Termite.png) | ![1-Hos](shots/1-Hos.png) |
+| 0. Dracula                                  | 1. Solarized-dark                                 |
+|:-------------------------------------------:|:-------------------------------------------------:|
+| ![0-Dracula](shots/0-Dracula.png)           | ![1-Solarized-dark](shots/1-Solarized-dark.png)   |
 
-| 2. Dracula                  | 3. Solarized-dark                         |
-|:---------------------------:|:-----------------------------------------:|
-| ![2-Dracula](shots/2-Dracula.png) | ![3-Solarized-dark](shots/3-Solarized-dark.png) |
+| 3. Gruvbox-dark                             | 4. Nord                                           |
+|:-------------------------------------------:|:-------------------------------------------------:|
+| ![3-Gruvbox-dark](shots/3-Gruvbox-dark.png) |  ![4-Gruvbox-dark](shots/4-Gruvbox-dark.png)      |
 
-| 4. Gruvbox-dark                       | 5. Ubuntu                 |
-|:-------------------------------------:|:-------------------------:|
-| ![4-Gruvbox-dark](shots/4-Gruvbox-dark.png) | ![5-Ubuntu](shots/5-Ubuntu.png) |
+| 4. Ubuntu                                   | 5. Ayu-dark                                       |
+|:-------------------------------------------:|:-------------------------------------------------:|
+| ![4-Ubuntu](shots/4-Ubuntu.png)             | ![5-Ayu-dark](shots/5-Ayu-dark.png)               |
 
-| 6. Ayu-dark                  | 7. 256_noir                   |
-|:-------------------------:|:-----------------------------:|
-| ![6-Ayu-dark](shots/6-Ayu-dark.png)   | ![7-256_noir](shots/7-256_noir.png) |
+| 6. Hos                                      | 7. Termite                                        |
+|:-------------------------------------------:|:-------------------------------------------------:|
+| ![6-Hos](shots/6-Hos.png)                   | ![7-Termite](shots/7-Termite.png)                 |
 
-| 8. Solarized-light                                |
-|:-------------------------------------------------:|
-| ![8-Solarized-light](shots/8-Solarized-light.png) |
+| 8. 256_noir                                 | 9. Solarized-light                                |
+|:-------------------------------------------:|:-------------------------------------------------:|
+| ![8-256_noir](shots/8-256_noir.png)         | ![9-Solarized-light](shots/9-Solarized-light.png) |
