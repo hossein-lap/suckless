@@ -1,94 +1,32 @@
 static const ColorScheme schemes[] = {
-	/* Termite {{{ */
-	{
-		{
-		/* 8 normal colors */
-			"#000000", /* black   */
-			"#FF0000", /* red     */
-			"#97D01A", /* green   */
-			"#FFA800", /* yellow  */
-			"#16B1FB", /* blue    */
-			"#FF2491", /* magenta */
-			"#0FDCB6", /* cyan    */
-			"#EBEBEB", /* white   */
-		/* 8 bright colors */
-			"#232323", /* black   */
-			"#FF0000", /* red     */
-			"#76B639", /* green   */
-			"#E1A126", /* yellow  */
-			"#289CD5", /* blue    */
-			"#FF2491", /* magenta */
-			"#0A9B81", /* cyan    */
-			"#F8F8F8", /* white   */
-		/* special */
-			[256] = "#f32323",
-			[257] = "#11121d"
-		},
-		15,   /* foreground */
-		257,  /* background */
-		1,    /* cursor */
-		257   /* I have no idea XD */
-	},
-	/*}}}*/
-	/* Hos {{{ */
-	{
-		{
-		/* 8 normal colors */
-			"#0A0A0A",
-			"#EE0000",
-			"#005f96",
-			"#0066ff",
-			"#0034b6",
-			"#d64601",
-			"#bb2121",
-			"#AAABA6",
-		/* 8 bright colors */
-			"#2E2E2C",
-			"#8B0000",
-			"#7013cc",
-			"#777777",
-			"#007700",
-			"#ff8c00",
-			"#e42121",
-			"#f53101",
-		/* special colors */
-			[256] = "#ffffff",
-			[257] = "#11121d",
-		},
-		7,    /* foreground */
-		257,  /* background */
-		1,    /* cursor */
-		257   /* I have no idea XD */
-	},
-	/* }}} */
 	/* Dracula {{{ */
 	{
 		{
 		/* 8 normal colors */
-			"#000000", /* black   */
-			"#ff5555", /* red     */
-			"#50fa7b", /* green   */
-			"#f1fa8c", /* yellow  */
-			"#bd93f9", /* blue    */
-			"#ff79c6", /* magenta */
-			"#8be9fd", /* cyan    */
-			"#bbbbbb", /* white   */
+			"#21222c",
+			"#ff5555",
+			"#50fa7b",
+			"#f1fa8c",
+			"#bd93f9",
+			"#ff79c6",
+			"#8be9fd",
+			"#f8f8f2",
 		/* 8 bright colors */
-			"#44475a", /* black   */
-			"#ff5555", /* red     */
-			"#50fa7b", /* green   */
-			"#f1fa8c", /* yellow  */
-			"#bd93f9", /* blue    */
-			"#ff79c6", /* magenta */
-			"#8be9fd", /* cyan    */
-			"#ffffff", /* white   */
+			"#6272a4",
+			"#ff6e6e",
+			"#69ff94",
+			"#ffffa5",
+			"#d6acff",
+			"#ff92df",
+			"#a4ffff",
+			"#ffffff",
 		/* special */
 			[256] = "#f32323",
 			[257] = "#282a36"
 		},
 		15,   /* foreground */
 		257,  /* background */
-		1,    /* cursor */
+		256,    /* cursor */
 		257   /* I have no idea XD */
 	},
 	/*}}}*/
@@ -117,12 +55,43 @@ static const ColorScheme schemes[] = {
 			[256] = "#93a1a1",
 			[257] = "#fdf6e3"
 		},
-		12,  /* foreground */
+		7,   /* foreground */
 		8,   /* background */
-		9,   /* cursor */
+		1,   /* cursor */
 		257  /* I have no idea XD */
 	},
 	/*}}}*/
+	/* Nord {{{ */
+	{
+		{
+		/* 8 normal colors */
+			"#3b4252",
+			"#bf616a",
+			"#a3be8c",
+			"#ebcb8b",
+			"#81a1c1",
+			"#b48ead",
+			"#88c0d0",
+			"#e5e9f0",
+		/* 8 bright colors */
+			"#373e4d",
+			"#94545d",
+			"#809575",
+			"#b29e75",
+			"#68809a",
+			"#8c738c",
+			"#6d96a5",
+			"#aeb3bb",
+		/* special */
+			[256] = "#d8dee9",
+			[257] = "#2e3440"
+		},
+		15,   /* foreground */
+		257,  /* background */
+		1,    /* cursor */
+		257   /* I have no idea XD */
+	},
+	/* }}} */
 	/* Gruvbox-dark {{{ */
 	{
 		{
@@ -185,7 +154,7 @@ static const ColorScheme schemes[] = {
 		257   /* I have no idea XD */
 	},
 	/* }}} */
-	/* Ayu-dark {{{ */
+	// /* Ayu-dark {{{ */
 	{
 		{
 		/* 8 normal colors */
@@ -215,7 +184,69 @@ static const ColorScheme schemes[] = {
 		1,    /* cursor */
 		257   /* I have no idea XD */
 	},
+	// /* }}} */
+	/* Hos {{{ */
+	{
+		{
+		/* 8 normal colors */
+			"#0A0A0A",
+			"#EE0000",
+			"#005f96",
+			"#0066ff",
+			"#0034b6",
+			"#d64601",
+			"#bb2121",
+			"#AAABA6",
+		/* 8 bright colors */
+			"#2E2E2C",
+			"#8B0000",
+			"#7013cc",
+			"#777777",
+			"#007700",
+			"#ff8c00",
+			"#e42121",
+			"#f53101",
+		/* special colors */
+			[256] = "#ffffff",
+			[257] = "#11121d",
+		},
+		7,    /* foreground */
+		257,  /* background */
+		1,    /* cursor */
+		257   /* I have no idea XD */
+	},
 	/* }}} */
+	/* Termite {{{ */
+	{
+		{
+		/* 8 normal colors */
+			"#000000", /* black   */
+			"#FF0000", /* red     */
+			"#97D01A", /* green   */
+			"#FFA800", /* yellow  */
+			"#16B1FB", /* blue    */
+			"#FF2491", /* magenta */
+			"#0FDCB6", /* cyan    */
+			"#EBEBEB", /* white   */
+		/* 8 bright colors */
+			"#232323", /* black   */
+			"#FF0000", /* red     */
+			"#76B639", /* green   */
+			"#E1A126", /* yellow  */
+			"#289CD5", /* blue    */
+			"#FF2491", /* magenta */
+			"#0A9B81", /* cyan    */
+			"#F8F8F8", /* white   */
+		/* special */
+			[256] = "#f32323",
+			[257] = "#11121d"
+		},
+		15,   /* foreground */
+		257,  /* background */
+		1,    /* cursor */
+		257   /* I have no idea XD */
+	},
+	/*}}}*/
 	/* 256_noir {{{ */
 	{
 		{
@@ -274,7 +305,7 @@ static const ColorScheme schemes[] = {
 			//"#002b36"
 		},
 		12,   /* foreground */
-		8,    /* background */
+		257,    /* background */
 		256,  /* cursor */
 		257   /* I have no idea XD */
 	},
