@@ -2,12 +2,13 @@
 
 /* vars */
 #define SCRIPTSPATH "~/.local/dev/hossein-lap/scripts/"
+#define COLORARG    "'", normal_bg, "' '", focus_fg, "' '", normal_fg, "'"
 
 static const char term[]		= "st";
-static const char fileman[]		= "sh "SCRIPTSPATH"lfub";
+static const char fileman[]		= "lf";
 static const char browser[]		= "firefox";
 static const char muspley[]		= "cmus";
-//static const char rssread[]		= "newsboat";
+static const char rssread[]		= "newsboat";
 
 //static const char ndterm[]		= "alacritty";
 static const char bdterm[]		= "lxterminal";
@@ -23,7 +24,8 @@ static const char bdterm[]		= "lxterminal";
  *   - dracula
  *   - soalrized-dark: {blue,green,pink,yellow}
  */
-#include "colors/solarized-dark/blue.h"
+//#include "colors/solarized-dark/blue.h"
+#include "colors/ubuntu.h"
 
 static const char *colors[][3]	  = {
         /*                     fg        bg        border   */
@@ -38,16 +40,16 @@ static const unsigned int gappx		= 18;	/* gap pixel between windows */
 static const int showbar		= 1;	/* 0 means no bar */
 static const int topbar			= 1;	/* 0 means bottom bar */
 
-static const char *fonts[]		= { "Fira Code:size=15" };
-static const char dmenufont[]		= { "Fira Code:size=15" };
+static const char *fonts[]		= { "Ubuntu Mono:size=16" };
+static const char dmenufont[]		= { "Ubuntu Mono:size=16" };
 
 /* tagging */
 //static const char *tags[] = { "sys", "dev", "www", "dir", "vid", "doc", "em", "pre", "tmp" };
-//static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 //static const char *tags[] = { "a", "b", "c", "d", "e", "f", "g", "h", "i" };
 //static const char *tags[] = { "a", "s", "d", "f", "g", "h", "j", "k", "l" };
 //static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
-static const char *tags[] = { "i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix" };
+//static const char *tags[] = { "i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -67,7 +69,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -106,19 +108,19 @@ static const char *floatcmd[]	= { term, "-t", "Terminal", NULL};
 static const char *takenote[]	= { "st", "-t", "Note", "bash", "-c", SCRIPTSPATH"note-take.sh", NULL};
 static const char *bidicmd[]	= { bdterm, NULL};
 
-static const char *filecmd[]	= { term, "-t", "lf", fileman, NULL};
-//static const char *newsboat[]	= { term, "-t", "Terminal", rssread, NULL};
+static const char *filecmd[]	= { term, "-t", fileman, fileman, NULL};
+static const char *newsboat[]	= { term, "-t", "Terminal", rssread, NULL};
 static const char *muscmd[]	= { "bash", "-c", SCRIPTSPATH"cmus-tmux.sh", NULL};
 static const char *wwwcmd[]	= { browser, NULL};
 /* change brightness */
 static const char *brightu[]	= { "brightnessctl", "s", "+5\%", NULL};
 static const char *brightd[]	= { "brightnessctl", "s", "5\%-", NULL};
 
-static const char *dmshot[]	= { "bash", "-c", SCRIPTSPATH"dm-shot.sh", dmenumon, NULL};
+static const char *dmshot[]	= { "bash", "-c", SCRIPTSPATH"dm-shot.sh", COLORARG, NULL};
 
-static const char *dmkill[]	= { "bash", "-c", SCRIPTSPATH"dm-kill.sh", dmenumon, NULL};
-static const char *dmsrun[]	= { "bash", "-c", SCRIPTSPATH"dm-srun.sh", dmenumon, NULL};
-static const char *dmusbd[]	= { "bash", "-c", SCRIPTSPATH"dm-usb.sh", focus_bg, focus_bg, normal_fg, NULL};
+static const char *dmkill[]	= { "bash", "-c", SCRIPTSPATH"dm-kill.sh", normal_bg, focus_fg, normal_fg, NULL};
+static const char *dmsrun[]	= { "bash", "-c", SCRIPTSPATH"dm-srun.sh", normal_bg, focus_fg, normal_fg, NULL};
+static const char *dmusbd[]	= { "bash", "-c", SCRIPTSPATH"dm-usb.sh", " '",  normal_bg, "' '", focus_fg, "' '", normal_fg, "'", NULL};
 static const char *scrn_lock[]	= { "slock", NULL};
 static const char *emclient[]	= { "emacsclient", "-c", "-a", "emacs", NULL};
 /* }}}*/
@@ -141,6 +143,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_f,		spawn,		{.v = filecmd	} },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		{.v = wwwcmd	} },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		{.v = muscmd	} },
+	{ MODKEY|ShiftMask,		XK_g,		spawn,		{.v = newsboat	} },
 
 	{ MODKEY,			XK_n,		spawn,		{.v = takenote	} },
 	{ MODKEY,			XK_e,		spawn,		{.v = emclient	} },
