@@ -32,7 +32,8 @@ hb_feature_t features[] = {
 			//FEATURE('c', 'v', '3', '0'),
 			FEATURE('c', 'v', '3', '2'),
 // $ ->-||-
-			FEATURE('s', 's', '0', '1'), FEATURE('s', 's', '0', '2'),
+			//FEATURE('s', 's', '0', '1'),
+			FEATURE('s', 's', '0', '2'),
 			FEATURE('s', 's', '0', '3'), FEATURE('s', 's', '0', '5'),
 			FEATURE('s', 's', '0', '7'), FEATURE('s', 's', '0', '9'),
 };
