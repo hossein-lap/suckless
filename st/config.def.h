@@ -37,19 +37,20 @@ typedef struct {
 static const char * const * colorname;
 
 /* default colorscheme */
-int colorscheme = 0;
+int colorscheme = 4;
 
 /*
  * available colorschemes:
- *   0. Termite
- *   1. Hos
- *   2. Dracula
- *   3. Solarized-dark
- *   4. Gruvbox-dark
- *   5. Ubuntu
- *   6. Ayu-dark
- *   7. 256_noir
- *   8. Solarized-light
+ *   0. Dracula
+ *   1. Solarized-dark
+ *   2. Nord
+ *   3. Gruvbox-dark
+ *   4. Ubuntu
+ *   5. Ayu-dark
+ *   6. Hos
+ *   7. Termite
+ *   8. 256_noir
+ *   9. Solarized light
  */
 
 /*
@@ -186,8 +187,8 @@ unsigned int tabspaces = 8;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int cols = 100; /* default: 80 */
+static unsigned int rows = 30;  /* default: 24 */
 
 /*
  * Default colour and shape of the mouse cursor
@@ -255,8 +256,9 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_7,           selectscheme,   {.i =  6} },
 	{ TERMMOD,              XK_8,           selectscheme,   {.i =  7} },
 	{ TERMMOD,              XK_9,           selectscheme,   {.i =  8} },
-	{ TERMMOD,              XK_0,           nextscheme,     {.i = +1} },
-	{ TERMMOD|ControlMask,  XK_0,           nextscheme,     {.i = -1} },
+	{ TERMMOD,              XK_0,           selectscheme,   {.i =  9} },
+	{ TERMMOD,              XK_grave,       nextscheme,     {.i = +1} },
+	{ TERMMOD|ControlMask,  XK_grave,       nextscheme,     {.i = -1} },
 };
 
 /*
