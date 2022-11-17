@@ -54,3 +54,7 @@ and some of patches that I've applied:
 
 - libjpeg-turbo-dev
 - libpng-dev
+
+# Screenshot
+
+![Suckless Tools](suckless.png)
