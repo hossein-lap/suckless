@@ -41,9 +41,9 @@ Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
 |:-------------------------------------------:|:-------------------------------------------------:|
 | ![0-Dracula](shots/0-Dracula.png)           | ![1-Solarized-dark](shots/1-Solarized-dark.png)   |
 
-| 3. Gruvbox-dark                             | 4. Nord                                           |
-|:-------------------------------------------:|:-------------------------------------------------:|
-| ![3-Gruvbox-dark](shots/3-Gruvbox-dark.png) |  ![4-Gruvbox-dark](shots/4-Gruvbox-dark.png)      |
+| 2. Nord                                     | 3. Gruvbox-dark                             |
+|:-------------------------------------------:|:-------------------------------------------:|
+|  ![2-Nord](shots/2-Nord.png)                | ![3-Gruvbox-dark](shots/3-Gruvbox-dark.png) |
 
 | 4. Ubuntu                                   | 5. Ayu-dark                                       |
 |:-------------------------------------------:|:-------------------------------------------------:|
