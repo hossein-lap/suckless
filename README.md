@@ -4,14 +4,14 @@ Hos's build of suckless tools
 
 This repo contains builds of:
 
-- [dmenu](dmenu/README.md)
-- [dwm](dwm/README.md)
-- [farbfeld](farbfeld/README.md)
-- [sent](sent/README.md)
-- [slock](slock/README.md)
-- [slstatus](slstatus/README.md)
-- [st](st/README.md)
-- [tabbed](tabbed/README.md)
+- [dmenu](dmenu/)
+- [dwm](dwm/)
+- [farbfeld](farbfeld/)
+- [sent](sent/)
+- [slock](slock/)
+- [slstatus](slstatus/)
+- [st](st/)
+- [tabbed](tabbed/)
 
 # Requirements
 
