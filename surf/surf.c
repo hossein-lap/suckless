@@ -50,6 +50,12 @@ enum {
 	OnAny   = OnDoc | OnLink | OnImg | OnMedia | OnEdit | OnBar | OnSel,
 };
 
+enum {
+	CustomProxy = WEBKIT_NETWORK_PROXY_MODE_CUSTOM,
+	SystemProxy = WEBKIT_NETWORK_PROXY_MODE_DEFAULT,
+	NoProxy		= WEBKIT_NETWORK_PROXY_MODE_NO_PROXY,
+};
+
 typedef enum {
 	AccessMicrophone,
 	AccessWebcam,
@@ -72,6 +78,9 @@ typedef enum {
 	KioskMode,
 	LoadImages,
 	MediaManualPlay,
+	ProxyIgnoreHosts,
+	ProxyMode,
+	ProxyUrl,
 	PreferredLanguages,
 	RunInFullscreen,
 	ScrollBars,
@@ -1110,6 +1119,7 @@ newview(Client *c, WebKitWebView *rv)
 	WebKitWebContext *context;
 	WebKitCookieManager *cookiemanager;
 	WebKitUserContentManager *contentmanager;
+	WebKitNetworkProxySettings *proxysettings;
 
 	/* Webview */
 	if (rv) {
@@ -1170,6 +1180,28 @@ newview(Client *c, WebKitWebView *rv)
 		webkit_web_context_set_tls_errors_policy(context,
 		    curconfig[StrictTLS].val.i ? WEBKIT_TLS_ERRORS_POLICY_FAIL :
 		    WEBKIT_TLS_ERRORS_POLICY_IGNORE);
+		/* proxy */
+		switch (curconfig[ProxyMode].val.i) {
+			case CustomProxy:
+				proxysettings = webkit_network_proxy_settings_new(
+					curconfig[ProxyUrl].val.v,
+					curconfig[ProxyIgnoreHosts].val.v);
+				webkit_web_context_set_network_proxy_settings(context,
+					CustomProxy,
+					proxysettings);
+				break;
+			case NoProxy:
+				webkit_web_context_set_network_proxy_settings(context,
+					NoProxy,
+					NULL);
+				break;
+			case SystemProxy:
+			default:
+				webkit_web_context_set_network_proxy_settings(context,
+					SystemProxy,
+					proxysettings);
+				break;
+		}
 		/* disk cache */
 		webkit_web_context_set_cache_model(context,
 		    curconfig[DiskCache].val.i ? WEBKIT_CACHE_MODEL_WEB_BROWSER :

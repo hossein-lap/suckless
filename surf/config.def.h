@@ -1,11 +1,11 @@
 /* modifier 0 means no modifier */
 static int surfuseragent    = 1;  /* Append Surf version to default WebKit user agent */
 static char *fulluseragent  = ""; /* Or override the whole user agent string */
-static char *scriptfile     = "~/.surf/script.js";
-static char *styledir       = "~/.surf/styles/";
-static char *certdir        = "~/.surf/certificates/";
-static char *cachedir       = "~/.surf/cache/";
-static char *cookiefile     = "~/.surf/cookies.txt";
+static char *scriptfile     = "~/.config/surf/script.js";
+static char *styledir       = "~/.config/surf/styles/";
+static char *certdir        = "~/.config/surf/certificates/";
+static char *cachedir       = "~/.config/surf/cache/";
+static char *cookiefile     = "~/.config/surf/cookies.txt";
 
 /* Webkit default features */
 /* Highest priority value will be used.
@@ -37,6 +37,10 @@ static Parameter defconfig[ParameterLast] = {
 	[LoadImages]          =       { { .i = 1 },     },
 	[MediaManualPlay]     =       { { .i = 1 },     },
 	[PreferredLanguages]  =       { { .v = (char *[]){ NULL } }, },
+	[ProxyIgnoreHosts]    =       { { .v = (char *[]){ "*.ir" } }, },
+	[ProxyMode]           =       { { .i = NoProxy }, },
+//	[ProxyMode]           =       { { .i = CustomProxy }, },
+	[ProxyUrl]            =       { { .v = (char *) "http://127.0.0.1:1090" }, },
 	[RunInFullscreen]     =       { { .i = 0 },     },
 	[ScrollBars]          =       { { .i = 1 },     },
 	[ShowIndicators]      =       { { .i = 1 },     },
@@ -71,7 +75,7 @@ static WebKitFindOptions findopts = WEBKIT_FIND_OPTIONS_CASE_INSENSITIVE |
              "prop=\"$(printf '%b' \"$(xprop -id $1 "r" " \
              "| sed -e 's/^"r"(UTF8_STRING) = \"\\(.*\\)\"/\\1/' " \
              "      -e 's/\\\\\\(.\\)/\\1/g')\" " \
-             "| dmenu -p '"p"' -w $1)\" " \
+             "| dmenu -l 5 -g 2 -bw 0 -p '"p"' -w $1)\" " \
              "&& xprop -id $1 -f "s" 8u -set "s" \"$prop\"", \
              "surf-setprop", winid, NULL \
         } \
@@ -157,7 +161,7 @@ static Key keys[] = {
 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_k,      zoom,       { .i = +1 } },
 	{ MODKEY|GDK_SHIFT_MASK, GDK_KEY_q,      zoom,       { .i = 0  } },
 	{ MODKEY,                GDK_KEY_minus,  zoom,       { .i = -1 } },
-	{ MODKEY,                GDK_KEY_plus,   zoom,       { .i = +1 } },
+	{ MODKEY,                GDK_KEY_equal,  zoom,       { .i = +1 } },
 
 	{ MODKEY,                GDK_KEY_p,      clipboard,  { .i = 1 } },
 	{ MODKEY,                GDK_KEY_y,      clipboard,  { .i = 0 } },
