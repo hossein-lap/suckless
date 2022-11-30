@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]        = "Source Code Pro:size=15";
+static const char font[]        = "Go Mono:size=12";
 static const char before[]      = "<";
 static const char after[]       = ">";
 static const char titletrim[]   = "...";
@@ -10,7 +10,7 @@ static const Bool foreground    = True;
 static       Bool urgentswitch  = False;
 
 /* colors */
-#include "colors/256_noir.h"
+#include "colors/dracula.h"
 
 /*
  * Where to place a new tab when it is opened. When npisrelative is True,
@@ -21,14 +21,13 @@ static int  newposition   = 1;
 static Bool npisrelative  = False;
 
 
-#define DMCOLORS "-sf '#000000' -sb '#ff0000' -nf '#ff0000' -nb '#000000' "
-#define DMENU "dmenu " DMCOLORS " -g 2 -p tab -l 5 -bw 0 -w $1"
+#define DMENU "dmenu -g 2 -p tab -l 5 -bw 0 -w $1"
 
 #define SETPROP(p) { \
 	.v = (char *[]){ "/bin/sh", "-c", \
 		"prop=\"`xwininfo -children -id $1 | grep '^     0x' |" \
 		"sed -e's@^ *\\(0x[0-9a-f]*\\) \"\\([^\"]*\\)\".*@\\1 \\2@' |" \
-                "xargs -0 printf %b | " DMENU "`\" &&" \
+		"xargs -0 printf %b | " DMENU "`\" &&" \
 		"xprop -id $1 -f $0 8s -set $0 \"$prop\"", \
 		p, winid, NULL \
 	} \
