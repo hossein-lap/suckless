@@ -10,22 +10,16 @@ static int centered = 0;                    /* -c option; centers dmenu on scree
 static int min_width = 500;                    /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Fira Mono:size=15"
+	"Fira Mono:size=12"
 };
 /* colorscheme */
-static const char col_alert[]    = "#f59554";
-static const char col_back[]     = "#010101";
-static const char col_four[]     = "#0097ff";
-//static const char col_back[]      = "#9997ff";
-//static const char col_back[]      = "#975fd7";
-//static const char col_back[]      = "#976f97";
-//static const char col_four[]      = "#f32323";
+#include "colors/dracula.h"
 
 static const char *colors[SchemeLast][2] = {
-	/*               fg         bg       */
-  [SchemeNorm] = { col_four, col_back  },
-  [SchemeSel] =  { col_back, col_four  },
-  [SchemeOut] =  { col_back, col_alert },
+	/*                fg           bg     */
+	[SchemeNorm] =  { normal_fg,   normal_bg  },
+	[SchemeSel]  =  { focus_fg,    focus_bg   },
+	[SchemeOut]  =  { sel_fg,      sel_bg     },
 
 };
 
