@@ -37,22 +37,22 @@ Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
 
 - Colorscheme:
 
-| 0. Dracula                                  | 1. Solarized-dark                                 |
-|:-------------------------------------------:|:-------------------------------------------------:|
-| ![0-Dracula](shots/0-Dracula.png)           | ![1-Solarized-dark](shots/1-Solarized-dark.png)   |
+| 0. Dracula                                        | 1. Solarized-dark                                |
+|:-------------------------------------------------:|:------------------------------------------------:|
+| ![0-Dracula](shots/0-Dracula.png)                 | ![1-Solarized-dark](shots/1-Solarized-dark.png)  |
 
-| 2. Nord                                     | 3. Gruvbox-dark                             |
-|:-------------------------------------------:|:-------------------------------------------:|
-|  ![2-Nord](shots/2-Nord.png)                | ![3-Gruvbox-dark](shots/3-Gruvbox-dark.png) |
+| 2. Gruvbox-dark                                   | 3. Ubuntu                                        |
+|:-------------------------------------------------:|:------------------------------------------------:|
+| ![2-Gruvbox-dark](shots/2-Gruvbox-dark.png)       | ![3-Ubuntu](shots/3-Ubuntu.png)                  |
 
-| 4. Ubuntu                                   | 5. Ayu-dark                                       |
-|:-------------------------------------------:|:-------------------------------------------------:|
-| ![4-Ubuntu](shots/4-Ubuntu.png)             | ![5-Ayu-dark](shots/5-Ayu-dark.png)               |
+| 4. Ayu-dark                                       | 5. Hos                                           |
+|:-------------------------------------------------:|:------------------------------------------------:|
+| ![4-Ayu-dark](shots/4-Ayu-dark.png)               | ![5-Hos](shots/5-Hos.png)                        |
 
-| 6. Hos                                      | 7. Termite                                        |
-|:-------------------------------------------:|:-------------------------------------------------:|
-| ![6-Hos](shots/6-Hos.png)                   | ![7-Termite](shots/7-Termite.png)                 |
+| 6. Termite                                        | 7. 256_noir                                      |
+|:-------------------------------------------------:|:------------------------------------------------:|
+| ![6-Termite](shots/6-Termite.png)                 | ![7-256_noir](shots/7-256_noir.png)              |
 
-| 8. 256_noir                                 | 9. Solarized-light                                |
-|:-------------------------------------------:|:-------------------------------------------------:|
-| ![8-256_noir](shots/8-256_noir.png)         | ![9-Solarized-light](shots/9-Solarized-light.png) |
+| 8. Solarized-light                                | 9. Default                                       |
+|:-------------------------------------------------:|:------------------------------------------------:|
+| ![8-Solarized-light](shots/8-Solarized-light.png) | ![9-Default](shots/9-Default.png)                |

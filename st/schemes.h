@@ -22,7 +22,8 @@ static const ColorScheme schemes[] = {
 			"#ffffff",
 		/* special */
 			[256] = "#f32323",
-			[257] = "#282a36"
+			[257] = "#1e1f29"
+//			[257] = "#282a36"
 		},
 		15,   /* foreground */
 		257,  /* background */
@@ -61,37 +62,6 @@ static const ColorScheme schemes[] = {
 		257  /* I have no idea XD */
 	},
 	/*}}}*/
-	/* Nord {{{ */
-	{
-		{
-		/* 8 normal colors */
-			"#3b4252",
-			"#bf616a",
-			"#a3be8c",
-			"#ebcb8b",
-			"#81a1c1",
-			"#b48ead",
-			"#88c0d0",
-			"#e5e9f0",
-		/* 8 bright colors */
-			"#373e4d",
-			"#94545d",
-			"#809575",
-			"#b29e75",
-			"#68809a",
-			"#8c738c",
-			"#6d96a5",
-			"#aeb3bb",
-		/* special */
-			[256] = "#d8dee9",
-			[257] = "#2e3440"
-		},
-		15,   /* foreground */
-		257,  /* background */
-		1,    /* cursor */
-		257   /* I have no idea XD */
-	},
-	/* }}} */
 	/* Gruvbox-dark {{{ */
 	{
 		{
@@ -145,12 +115,13 @@ static const ColorScheme schemes[] = {
 			"#06989a",
 			"#d3d7cf",
 		/* special */
-			[256] = "#eeeeec",
-			[257] = "#300a24"
+			[256] = "#ff7700",
+			//[256] = "#eeeeec",
+			[257] = "#2d0922"
 		},
 		15,   /* foreground */
 		257,  /* background */
-		1,    /* cursor */
+		256,    /* cursor */
 		257   /* I have no idea XD */
 	},
 	/* }}} */
@@ -306,6 +277,37 @@ static const ColorScheme schemes[] = {
 		},
 		12,   /* foreground */
 		257,    /* background */
+		256,  /* cursor */
+		257   /* I have no idea XD */
+	},
+	/*}}}*/
+	/* Default {{{ */
+	{
+		{
+		/* 8 normal colors */
+			"black",
+			"red3",
+			"green3",
+			"yellow3",
+			"blue2",
+			"magenta3",
+			"cyan3",
+			"gray90",
+		/* 8 bright colors */
+			"gray50",
+			"red",
+			"green",
+			"yellow",
+			"#5c5cff",
+			"magenta",
+			"cyan",
+			"white",
+		/* special */
+			[256] = "#cccccc",
+			[257] = "black",
+		},
+		7,    /* foreground */
+		257,  /* background */
 		256,  /* cursor */
 		257   /* I have no idea XD */
 	},

@@ -37,20 +37,20 @@ typedef struct {
 static const char * const * colorname;
 
 /* default colorscheme */
-int colorscheme = 4;
+int colorscheme = 0;
 
 /*
  * available colorschemes:
  *   0. Dracula
  *   1. Solarized-dark
- *   2. Nord
- *   3. Gruvbox-dark
- *   4. Ubuntu
- *   5. Ayu-dark
- *   6. Hos
- *   7. Termite
- *   8. 256_noir
- *   9. Solarized light
+ *   2. Gruvbox-dark
+ *   3. Ubuntu
+ *   4. Ayu-dark
+ *   5. Hos
+ *   6. Termite
+ *   7. 256_noir
+ *   8. Solarized light
+ *   9. Default
  */
 
 /*
