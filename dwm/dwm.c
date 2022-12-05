@@ -242,7 +242,7 @@ static void zoom(const Arg *arg);
 static const char autostartblocksh[] = "autostart_blocking.sh";
 static const char autostartsh[] = "autostart.sh";
 static const char broken[] = "broken";
-static const char dwmdir[] = ".config/dwm";
+static const char dwmdir[] = "dwm";
 static const char localshare[] = ".local/share";
 static char stext[256];
 static char fribidi_text[BUFSIZ] = "";
@@ -1469,7 +1469,7 @@ runautostart(void)
 		}
 		pathpfx = pathpfx_new;
 
-		if (sprintf(pathpfx, "%s/.%s", home, dwmdir) <= 0) {
+		if (sprintf(pathpfx, "%s/.config/%s", home, dwmdir) <= 0) {
 			free(pathpfx);
 			return;
 		}
