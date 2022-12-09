@@ -14,16 +14,16 @@ static const char bdterm[]		= "lxterminal";
 
 /* colorschemes */
 /*
- * List if colors:
+ * List of colors:
  *   - blue:      "#0077ff" - cyan:      "#00aaff"
  *   - pink:      "#ff77cc" - purple:    "#cc77ff"
  *   - red:       "#ff0000" - darkpink:  "#e95678"
  *   - orange:    "#ff7700" - yellow:    "#ffd500"
  *   - white:     "#ffffff"
- *   - dracula
+ *   - default              - dracula
  *   - soalrized-dark: {blue,green,pink,yellow}
  */
-#include "colors/dracula.h"
+#include "colors/default.h"
 
 static const char *colors[][3]	  = {
         /*                     fg        bg        border   */
@@ -33,8 +33,8 @@ static const char *colors[][3]	  = {
 
 /* appearance */
 static const unsigned int borderpx	= 2;	/* border pixel of windows */
-static const unsigned int snap		= 16;	/* snap pixel */
-static const unsigned int gappx		= 16;	/* gap pixel between windows */
+static const unsigned int snap		= 32;	/* snap pixel */
+static const unsigned int gappx		= 18;	/* gap pixel between windows */
 static const int showbar		= 1;	/* 0 means no bar */
 static const int topbar			= 1;	/* 0 means bottom bar */
 
@@ -132,6 +132,8 @@ static const char *dmsrun[]	= { "bash", "-c", SCRIPTSPATH"dm-srun.sh", NULL};
 static const char *dmusbd[]	= { "bash", "-c", SCRIPTSPATH"dm-usb.sh",  NULL};
 static const char *scrn_lock[]	= { "slock", NULL};
 static const char *emclient[]	= { "emacsclient", "-c", "-a", "emacs", NULL};
+
+static const char *sysbtop[]	= { term, "-t", "Terminal", "btop", NULL};
 /* }}}*/
 
 static Key keys[] = {
@@ -151,6 +153,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		{.v = wwwcmd	} },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		{.v = muscmd	} },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		{.v = newsboat	} },
+	{ MODKEY|ControlMask,		XK_Delete,	spawn,		{.v = sysbtop	} },
 
 	{ MODKEY,			XK_n,		spawn,		{.v = takenote	} },
 	{ MODKEY,			XK_e,		spawn,		{.v = emclient	} },
