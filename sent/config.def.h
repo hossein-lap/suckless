@@ -1,23 +1,15 @@
 /* See LICENSE file for copyright and license details. */
 
 static char *fontfallbacks[] = {
+	"ubuntu",
 	"Libertinus Sans",
 	"Source Sans Pro",
 	"Source Serif Pro",
-	"ubuntu",
 };
 #define NUMFONTSCALES 42
 #define FONTSZ(x) ((int)(10.0 * powf(1.1288, (x)))) /* x in [0, NUMFONTSCALES-1] */
 
-static const char *colors[] = {
-	"#FFFFFF", /* foreground color */
-	"#000000", /* background color */
-};
-
-static const char *inverted_colors[] = {
-	"#000000", /* foreground color */
-	"#FFFFFF", /* background color */
-};
+#include "colors/bw.h"
 
 static const float linespacing = 1.4;
 
