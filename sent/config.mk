@@ -15,7 +15,7 @@ BDLIBS = -lfribidi
 
 # includes and libs
 INCS = -I. -I/usr/include -I/usr/include/freetype2 -I${X11INC} -I$(BDINC)
-LIBS = -L/usr/lib -lc -lm -L${X11LIB} -lXft -lfontconfig -lX11 $(BDLIBS)
+LIBS = -L/usr/lib -lc -lm -L${X11LIB} -lXft -lfontconfig -lX11 $(BDLIBS) -lcairo
 # OpenBSD (uncomment)
 #INCS = -I. -I${X11INC} -I${X11INC}/freetype2 -I$(BDINC)
 # FreeBSD (uncomment)
