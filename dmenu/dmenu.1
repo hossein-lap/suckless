@@ -25,6 +25,7 @@ dmenu \- dynamic menu
 .IR color ]
 .RB [ \-w
 .IR windowid ]
+.RB [ \-wm ]
 .RB [ \-dy
 .IR command ]
 .P
@@ -94,6 +95,9 @@ prints version information to stdout, then exits.
 .TP
 .BI \-w " windowid"
 embed into windowid.
+.TP
+.BI \-wm
+Display as a managed WM window (e.g. don't set overide_redirect flag)
 .TP
 .BI \-dy " command"
 runs command whenever input changes to update menu items.
