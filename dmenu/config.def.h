@@ -10,11 +10,12 @@ static int centered = 0;                    /* -c option; centers dmenu on scree
 static int min_width = 500;                    /* minimum width when centered */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Ubuntu Mono:size=15"
+//	"Ubuntu Mono:size=15"
 //	"Fira Mono:size=12"
+	"Fira Code:size=14"
 };
 /* colorscheme */
-#include "colors/dracula.h"
+#include "colors/fg/orange.h"
 
 static const char *colors[SchemeLast][2] = {
 	/*                fg           bg     */
